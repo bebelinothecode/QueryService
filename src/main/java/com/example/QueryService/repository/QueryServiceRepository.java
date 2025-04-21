@@ -9,8 +9,6 @@ import org.springframework.data.repository.query.Param;
 import java.time.LocalDateTime;
 
 
-//@Query("SELECT c FROM QueryServiceEntity c WHERE c.record_date BETWEEN :startDate AND :endDate AND (:msisdn IS NULL OR c.msisdn = :msisdn) AND (:imsi IS NULL OR c.imsi = :imsi)")
-
 public interface QueryServiceRepository extends JpaRepository<QueryServiceEntity, Long> {
     @Query("SELECT c FROM  QueryServiceEntity c" +
             " WHERE c.recordDate BETWEEN :startDate AND :endDate " +
